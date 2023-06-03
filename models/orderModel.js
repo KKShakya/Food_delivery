@@ -1,5 +1,6 @@
+const mongoose = require('mongoose')
+
 const Schema = mongoose.Schema({
-  _id: ObjectId,
   user: { type: ObjectId, ref: 'User' },
   restaurant: { type: ObjectId, ref: 'Restaurant' },
   items: [{
@@ -16,7 +17,10 @@ const Schema = mongoose.Schema({
     zip: String
   },
   // e.g, "placed", "preparing", "on the way", "delivered"
-  status: String 
+  status: {
+    type:String,
+    enum: ["placed", "preparing", "on the way", "delivered"],
+  }
 })
 
 

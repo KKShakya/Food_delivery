@@ -1,5 +1,9 @@
+
+const mongoose = require('mongoose')
+
+
 const Schema = mongoose.Schema({
-  _id: ObjectId,
+
   name: String,
   address: {
     street: String,
@@ -9,7 +13,6 @@ const Schema = mongoose.Schema({
     zip: String
   },
   menu: [{
-    _id: ObjectId,
     name: String,
     description: String,
     price: Number,
