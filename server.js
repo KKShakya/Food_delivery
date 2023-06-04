@@ -6,6 +6,9 @@ const ErrorMiddleware = require('./middlewares/Error');
 const pageNotFound = require('./middlewares/pageNotFound');
 const user = require('./routes/userRoutes.js')
 const restaurants = require('./routes/restaurantRoutes')
+const orders = require('./routes/orderRoutes')
+
+
 
 const app = express();
 const PORT = process.env.PORT || 3500;
@@ -23,8 +26,7 @@ app.get('/',(req,res)=>{
 
 app.use("/api",user)
 app.use("/api/restaurants",restaurants)
-
-
+app.use("/api/orders",orders)
 // for page not found
 app.use(pageNotFound)
 

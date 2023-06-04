@@ -14,7 +14,7 @@ const router = express.Router();
 router.get('/', getResaturantList);
 router.get('/:id', getResaturant);
 router.route('/:id/menu').get(getResaturantMenu).post(addResaturantMenu);
-router.route('/:id/menu/:id').get(deleteResaturantMenu)
+router.route('/:id/menu/:menu_id').delete(deleteResaturantMenu)
 
 
 module.exports = router;

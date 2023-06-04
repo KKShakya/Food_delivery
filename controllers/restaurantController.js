@@ -63,17 +63,19 @@ const addResaturantMenu = catchAsyncError(async (req,res,next) => {
       return next(new ErrorHandler("Please fill all the details",400))
     }
      
-   const restaurant = await resataurantModel.findOne({_id:id});
+   const restaurant = await resataurantModel.findByIdAndUpdate(id,
+      {$addToSet:{menu:{name,description,price,image}}},
+      {new :true} //ensuring updation
+      );
 
 
 
    if(!restaurant){
-    return next(new ErrorHandler("An error occurred while fetching",502))
+    return next(new ErrorHandler("An error occurred while adding an item",502))
    }
 
-   restaurant.menu.push({name,price,description,image})
+   // restaurant.menu.push({name,price,description,image})
   
-   await restaurant.save();
     
    res.status(201).send({
     success: true,
@@ -83,20 +85,28 @@ const addResaturantMenu = catchAsyncError(async (req,res,next) => {
 })
 
 
+//nested objects working
+
 const deleteResaturantMenu = catchAsyncError(async (req,res,next) => {
 
    
-    const {id} = req.params;
-    console.log(id)
+    const {id,menu_id} = req.params;
+    console.log(id,menu_id)
 
-     
-   const restaurant = await resataurantModel.find({menu:{$eleMatch:{_id:id}}})
+   //   1. getting restaurant from _id
+   //   2. pulling out menu tem eith specific id
+   //   3. new :true ensures that the method returns the updated document after the update operation is performed.
+
+   const restaurant = await resataurantModel.findByIdAndUpdate(id,
+      {$pull:{menu:{_id:menu_id}}},
+      {new:true}
+   );
 
 
     
-   res.status(201).send({
+   res.status(202).send({
     success: true,
-    restaurant
+   message:"Menu Item deleted successfully",
    })
 
 })
