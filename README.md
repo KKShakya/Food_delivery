@@ -12,10 +12,10 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 
 | Name | Method | URL | Description |
 |------|--------|-----|-------------|
-| register | POST | http://localhost:8080/api/register | A request to register a new user in the Database |
-| login | POST | http://localhost:8080/api/login | To allow user to login to the System with Cookies generation |
+| register | POST | https://fopd-delivery-app.onrender.com/api/register | A request to register a new user in the Database |
+| login | POST | https://fopd-delivery-app.onrender.com/api/login | To allow user to login to the System with Cookies generation |
 | root to check API working | GET | http://localhost:8080 | To check the working of API. Demo test |
-| resetPassword | POST | http://localhost:8080/api/user/647c262bec59224ed0526e58/reset | Allows users to reset their password by providing the current password and new password in the request body. |
+| resetPassword | POST | https://fopd-delivery-app.onrender.com/api/user/647c262bec59224ed0526e58/reset | Allows users to reset their password by providing the current password and new password in the request body. |
 
 </br>
 </br>
@@ -23,7 +23,7 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 ### register
 
 - Method: POST
-- URL: http://localhost:8080/api/register
+- URL: https://fopd-delivery-app.onrender.com/api/register
 - Description: A request to register a new user in the Database
 - Body:
   ```json
@@ -36,7 +36,7 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 ### login
 
 - Method: POST
-- URL: http://localhost:8080/api/login
+- URL: https://fopd-delivery-app.onrender.com/api/login
 - Description: To allow user to login to the System with Cookies generation
 - Body:
   ```json
@@ -56,7 +56,7 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 ### resetPassword
 
 - Method: POST
-- URL: http://localhost:8080/api/user/647c262bec59224ed0526e58/reset
+- URL: https://fopd-delivery-app.onrender.com/api/user/647c262bec59224ed0526e58/reset
 - Description: Allows users to reset their password by providing the current password and new password in the request body.
 - Body:
   ```json
@@ -84,11 +84,11 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 
 | Name | Method | URL | Description |
 |------|--------|-----|-------------|
-| delete a menu item | DELETE | http://localhost:8080/api/restaurants/647c3f2d4c4ebcbb300c4784/menu/647c89c65d544d9d3098c09c | Allows the user to delete a particular menu item identified by its ID from a specific restaurant. |
-| add a menu item | POST | http://localhost:8080/api/restaurants/647c3f2d4c4ebcbb300c4784/menu | Allows the user to add a new item to a specific restaurant's menu identified by its ID. |
-| Specific restaurant details | GET | http://localhost:8080/api/restaurants/647c3f2d4c4ebcbb300c4784 | Returns the details of a specific restaurant identified by its ID. |
-| get a specific restaurant menu | GET | http://localhost:8080/api/restaurants/647c40364c4ebcbb300c4788/menu | Returns the menu of a specific restaurant identified by its ID. |
-| get all restaurants | GET | http://localhost:8080/api/restaurants | Returns a list of all available restaurants. |
+| delete a menu item | DELETE | https://fopd-delivery-app.onrender.com/api/restaurants/647c3f2d4c4ebcbb300c4784/menu/647c89c65d544d9d3098c09c | Allows the user to delete a particular menu item identified by its ID from a specific restaurant. |
+| add a menu item | POST | https://fopd-delivery-app.onrender.com/api/restaurants/647c3f2d4c4ebcbb300c4784/menu | Allows the user to add a new item to a specific restaurant's menu identified by its ID. |
+| Specific restaurant details | GET | https://fopd-delivery-app.onrender.com/api/restaurants/647c3f2d4c4ebcbb300c4784 | Returns the details of a specific restaurant identified by its ID. |
+| get a specific restaurant menu | GET | https://fopd-delivery-app.onrender.com/api/restaurants/647c40364c4ebcbb300c4788/menu | Returns the menu of a specific restaurant identified by its ID. |
+| get all restaurants | GET | https://fopd-delivery-app.onrender.com/api/restaurants | Returns a list of all available restaurants. |
 
 
 </br>
@@ -97,7 +97,7 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 ### delete a menu item
 
 - Method: DELETE
-- URL: http://localhost:8080/api/restaurants/647c3f2d4c4ebcbb300c4784/menu/647c89c65d544d9d3098c09c
+- URL: https://fopd-delivery-app.onrender.com/api/restaurants/647c3f2d4c4ebcbb300c4784/menu/647c89c65d544d9d3098c09c
 - Description: Allows the user to delete a particular menu item identified by its ID from a specific restaurant.
 - Body:
   ```json
@@ -114,7 +114,7 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 ### add a menu item
 
 - Method: POST
-- URL: http://localhost:8080/api/restaurants/647c3f2d4c4ebcbb300c4784/menu
+- URL: https://fopd-delivery-app.onrender.com/api/restaurants/647c3f2d4c4ebcbb300c4784/menu
 - Description: Allows the user to add a new item to a specific restaurant's menu identified by its ID.
 - Body:
   ```json
@@ -130,7 +130,7 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 ### Specific restaurant details
 
 - Method: GET
-- URL: http://localhost:8080/api/restaurants/647c3f2d4c4ebcbb300c4784
+- URL: https://fopd-delivery-app.onrender.com/api/restaurants/647c3f2d4c4ebcbb300c4784
 - Description: Returns the details of a specific restaurant identified by its ID.
 
 
@@ -139,14 +139,14 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 ### get a specific restaurant menu
 
 - Method: GET
-- URL: http://localhost:8080/api/restaurants/647c40364c4ebcbb300c4788/menu
+- URL: https://fopd-delivery-app.onrender.com/api/restaurants/647c40364c4ebcbb300c4788/menu
 - Description: Returns the menu of a specific restaurant identified by its ID.
 
 </br>
 
 ### get all restaurants
 - Method: GET
-- URL: http://localhost:8080/api/restaurants
+- URL: https://fopd-delivery-app.onrender.com/api/restaurants
 - Description: Returns a list of all available restaurants.
 
 </br>
@@ -162,9 +162,9 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 
 | Name | Method | URL | Description |
 |------|--------|-----|-------------|
-| Create an Order | POST | http://localhost:8080/api/orders/ | Allows the user to place an order. |
-| Update the Status | PATCH | http://localhost:8080/api/orders/647c967cf692847deac0e8f3 | Allows users to update the status of a specific order identified by its ID. |
-| Get Specific Order | GET | http://localhost:8080/api/orders/647c967cf692847deac0e8f3 | Returns the details of a specific order identified by its ID. |
+| Create an Order | POST | https://fopd-delivery-app.onrender.com/api/orders/ | Allows the user to place an order. |
+| Update the Status | PATCH | https://fopd-delivery-app.onrender.com/api/orders/647c967cf692847deac0e8f3 | Allows users to update the status of a specific order identified by its ID. |
+| Get Specific Order | GET | https://fopd-delivery-app.onrender.com/api/orders/647c967cf692847deac0e8f3 | Returns the details of a specific order identified by its ID. |
 
 </br>
 </br>
@@ -172,7 +172,7 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 ### Create an Order
 
 - Method: POST
-- URL: http://localhost:8080/api/orders/
+- URL: https://fopd-delivery-app.onrender.com/api/orders/
 - Description: Allows the user to place an order.
 - Body:
   ```json
@@ -199,7 +199,7 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 ### Update the Status
 
 - Method: PATCH
-- URL: http://localhost:8080/api/orders/647c967cf692847deac0e8f3
+- URL: https://fopd-delivery-app.onrender.com/api/orders/647c967cf692847deac0e8f3
 - Description: Allows users to update the status of a specific order identified by its ID.
 - Body:
   ```json
@@ -212,7 +212,7 @@ This is a Food delivery App backend to manage restaurant selection and orders fr
 ###  Get Specific Order
 
 - Method: GET
-- URL: http://localhost:8080/api/orders/647c967cf692847deac0e8f3
+- URL: https://fopd-delivery-app.onrender.com/api/orders/647c967cf692847deac0e8f3
 - Description: Returns the details of a specific order identified by its ID.
 
 
