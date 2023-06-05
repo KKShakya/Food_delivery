@@ -1,0 +1,121 @@
+{
+	"info": {
+		"_postman_id": "bc1174f4-db06-4708-a23e-2c93524a62d9",
+		"name": "Authentication",
+		"description": "This collection is for Authentiacatin purpose only",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19000646",
+		"_collection_link": "https://restless-comet-657983.postman.co/workspace/8bdb383d-e532-4bb8-8c86-845e0f597e18/collection/19000646-bc1174f4-db06-4708-a23e-2c93524a62d9?action=share&creator=19000646&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"kumar\",\r\n    \"email\":\"jumbo@gmail.com\",\r\n    \"password\":\"12345\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/register",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"register"
+					]
+				},
+				"description": "A request to register a new user in the Database"
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\r\n    \"email\":\"jumbo@gmail.com\",\r\n    \"password\":\"123456\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login"
+					]
+				},
+				"description": "To allow user to login to the System. with Cookies genaration"
+			},
+			"response": []
+		},
+		{
+			"name": "root to check APi working",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080"
+				},
+				"description": "To check the working of APi . Demo test"
+			},
+			"response": []
+		},
+		{
+			"name": "resetPassword",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"currentPassword\":\"\",\r\n    \"newPassword\":\"\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/user/647c262bec59224ed0526e58/reset",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"user",
+						"647c262bec59224ed0526e58",
+						"reset"
+					]
+				},
+				"description": "StartFragment\n\nAllows users to reset their password by providing the current password and new password in the request body.\n\nEndFragmen"
+			},
+			"response": []
+		}
+	]
+}

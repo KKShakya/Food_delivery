@@ -1,5 +1,6 @@
 const express = require('express');
 require('dotenv').config();
+const cookieParser = require('cookie-parser');
 
 const  {connectDB } = require('./config/db');
 const ErrorMiddleware = require('./middlewares/Error');
@@ -15,7 +16,7 @@ const PORT = process.env.PORT || 3500;
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }));
-
+app.use(cookieParser());
 
 
 app.get('/',(req,res)=>{
