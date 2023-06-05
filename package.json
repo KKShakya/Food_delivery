@@ -4,7 +4,6 @@
   "description": "A basic REST Api to get order food online from restaurants",
   "main": "server.js",
   "scripts": {
-    "start": "nodemon server.js"
   },
   "author": "Krishna Kumar Shakya",
   "license": "ISC",

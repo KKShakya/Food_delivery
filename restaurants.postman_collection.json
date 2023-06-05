@@ -1,0 +1,142 @@
+{
+	"info": {
+		"_postman_id": "2296d5ba-924c-4a29-a96e-d2f921d82a94",
+		"name": "restaurants",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19000646",
+		"_collection_link": "https://restless-comet-657983.postman.co/workspace/Food_delivery-app~8bdb383d-e532-4bb8-8c86-845e0f597e18/collection/19000646-2296d5ba-924c-4a29-a96e-d2f921d82a94?action=share&creator=19000646&source=collection_link"
+	},
+	"item": [
+		{
+			"name": "delete a menu item",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Paneer tikka Malai\",\r\n    \"description\":\"Freshly prepared and slow roasted paneer\",\r\n    \"price\":90,\r\n    \"image\":\"https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Neha_Mathur/Achari_Paneer_Tikka_Recipe_Party_Food_400.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/restaurants/647c3f2d4c4ebcbb300c4784/menu/647c89c65d544d9d3098c09c",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"restaurants",
+						"647c3f2d4c4ebcbb300c4784",
+						"menu",
+						"647c89c65d544d9d3098c09c"
+					]
+				},
+				"description": "StartFragment\n\nAllows the user to delete a particular menu item identified by its ID from a specific restaurant.\n\nEndFragment"
+			},
+			"response": []
+		},
+		{
+			"name": "add a menu item",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\":\"Paneer malai kofta\",\r\n    \"description\":\"Freshly prepared and slow roasted paneer\",\r\n    \"price\":120,\r\n    \"image\":\"https://www.archanaskitchen.com/images/archanaskitchen/1-Author/Neha_Mathur/Achari_Paneer_Tikka_Recipe_Party_Food_400.jpg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/restaurants/647c3f2d4c4ebcbb300c4784/menu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"restaurants",
+						"647c3f2d4c4ebcbb300c4784",
+						"menu"
+					]
+				},
+				"description": "StartFragment\n\nAllows the user to add a new item to a specific restaurant's menu identified by its ID.\n\nEndFragment"
+			},
+			"response": []
+		},
+		{
+			"name": "Specific restaurant details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/restaurants/647c3f2d4c4ebcbb300c4784",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"restaurants",
+						"647c3f2d4c4ebcbb300c4784"
+					]
+				},
+				"description": "StartFragment\n\nReturns the details of a specific restaurant identified by its ID.\n\nEndFragment"
+			},
+			"response": []
+		},
+		{
+			"name": "get a specific restsaurant menu",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/restaurants/647c40364c4ebcbb300c4788/menu",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"restaurants",
+						"647c40364c4ebcbb300c4788",
+						"menu"
+					]
+				},
+				"description": "StartFragment\n\nReturns the menu of a specific restaurant identified by its ID.\n\nEndFragment"
+			},
+			"response": []
+		},
+		{
+			"name": "get all restaurants",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/api/restaurants",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"restaurants"
+					]
+				},
+				"description": "StartFragment\n\nReturns a list of all available restaurants.\n\nEndFragment"
+			},
+			"response": []
+		}
+	]
+}
